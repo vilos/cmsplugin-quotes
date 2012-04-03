@@ -44,7 +44,7 @@ class Quote(models.Model):
     active = models.BooleanField(_("Enabled"), default=True)
     #created = models.DateField(_("Date created"), null=True, blank=True)
 
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
     objects = QuoteManager()
 
     def get_tags(self):
