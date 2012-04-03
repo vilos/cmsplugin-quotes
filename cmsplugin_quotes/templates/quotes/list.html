@@ -1,0 +1,10 @@
+{% load i18n %}
+<div id="quotes">
+    {% for quote in quotes %}
+    <p class="{% cycle 'even' 'odd' %}">
+      “{{ quote.html|safe }}” <em>&mdash;&nbsp;{{quote.author}}</em>
+    </p>
+    {% endfor %}
+    <p class="more"><a href="?start={{next}}">{% trans "SHOW MORE..." %}</a></p>
+    <div class="clear"></div>
+</div>

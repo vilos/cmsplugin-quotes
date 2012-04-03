@@ -1,0 +1,8 @@
+<div id="quotes">
+    {% for quote in quotes %}
+    <p class="{% cycle 'even' 'odd' %}">
+      {{ quote.html|safe }} <br/>
+      <em> &mdash; {{quote.author}}</em>
+    </p>
+    {% endfor %}
+</div>
